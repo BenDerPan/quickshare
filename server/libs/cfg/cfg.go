@@ -2,12 +2,9 @@ package cfg
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
 	"io/ioutil"
-	"net"
 	"strconv"
-	"strings"
 )
 
 type Config struct {
@@ -103,7 +100,7 @@ func NewConfig() *Config {
 		SecretKeyByte: []byte("qs"),
 		// server
 		Production: true,
-		HostName:   "localhost",
+		HostName:   "0.0.0.0",
 		Port:       8888,
 		// performance
 		MaxUpBytesPerSec:   500 * 1000,
@@ -208,44 +205,5 @@ func NewConfigFrom(path string) *Config {
 	}
 
 	config.SecretKeyByte = []byte(config.SecretKey)
-	if config.HostName == "" {
-		hostName, err := GetLocalAddr()
-		if err != nil {
-			panic(err)
-		}
-		config.HostName = hostName.String()
-	}
-
 	return config
-}
-
-func GetLocalAddr() (net.IP, error) {
-	fmt.Println(`config.HostName is empty(""), choose one IP for listening automatically.`)
-	infs, err := net.Interfaces()
-	if err != nil {
-		panic("fail to get net interfaces")
-	}
-
-	for _, inf := range infs {
-		if inf.Flags&4 != 4 && !strings.Contains(inf.Name, "docker") {
-			addrs, err := inf.Addrs()
-			if err != nil {
-				panic("fail to get addrs of interface")
-			}
-			for _, addr := range addrs {
-				switch v := addr.(type) {
-				case *net.IPAddr:
-					if !strings.Contains(v.IP.String(), ":") {
-						return v.IP, nil
-					}
-				case *net.IPNet:
-					if !strings.Contains(v.IP.String(), ":") {
-						return v.IP, nil
-					}
-				}
-			}
-		}
-	}
-
-	return nil, errors.New("no addr found")
 }

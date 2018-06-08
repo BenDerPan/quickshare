@@ -37,7 +37,7 @@ func main() {
 	}
 
 	log.Printf("quickshare starts @ %s:%d", config.HostName, config.Port)
-	err := open.Start(fmt.Sprintf("http://%s:%d", config.HostName, config.Port))
+	err := open.Start(fmt.Sprintf("http://127.0.0.1:%d", config.Port))
 	if err != nil {
 		log.Println(err)
 	}

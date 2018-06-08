@@ -9,12 +9,12 @@
     "build-client": "webpack --config ./client/webpack.config.prod.js",
     "build-client-dev": "webpack --config ./client/webpack.config.dev.js",
     "clean": "go clean && rm -r ./dist && rm -r ./public/dist",
-    "ci-check-fmt": "yarn prettier -l  '@(client|docs)/*.@(js|jsx|md)'",
+    "check-fmt": "yarn prettier -l  '@(client|docs)/*.@(js|jsx|md)'",
     "fmt":
       "go fmt ./... && yarn prettier --write  '@(client|docs)/*.@(js|jsx|md)'",
     "setup": "yarn && dep ensure",
     "start": "yarn build-client && go run server.go",
-    "test": "go test -v ./... && yarn jest --coverage"
+    "test": "go test -v ./... && yarn jest --coverage && yarn check-fmt"
   },
   "author": "hexxa",
   "license": "LGPL-3.0",
