@@ -1,0 +1,1 @@
+# this is a fork from (https://github.com/ihexxa/quickshare)[https://github.com/ihexxa/quickshare]

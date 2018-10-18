@@ -6,9 +6,9 @@ import (
 )
 
 import (
-	"github.com/ihexxa/quickshare/server/libs/fileidx"
-	"github.com/ihexxa/quickshare/server/libs/httputil"
-	"github.com/ihexxa/quickshare/server/libs/httpworker"
+	"github.com/benderpan/quickshare/server/libs/fileidx"
+	"github.com/benderpan/quickshare/server/libs/httputil"
+	"github.com/benderpan/quickshare/server/libs/httpworker"
 )
 
 func (srv *SrvShare) DownloadHandler(res http.ResponseWriter, req *http.Request) {

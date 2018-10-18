@@ -11,15 +11,15 @@ import (
 )
 
 import (
-	"github.com/ihexxa/quickshare/server/libs/cfg"
-	"github.com/ihexxa/quickshare/server/libs/encrypt"
-	"github.com/ihexxa/quickshare/server/libs/errutil"
-	"github.com/ihexxa/quickshare/server/libs/fileidx"
-	"github.com/ihexxa/quickshare/server/libs/httputil"
-	"github.com/ihexxa/quickshare/server/libs/httpworker"
-	"github.com/ihexxa/quickshare/server/libs/limiter"
-	"github.com/ihexxa/quickshare/server/libs/logutil"
-	"github.com/ihexxa/quickshare/server/libs/walls"
+	"github.com/benderpan/quickshare/server/libs/cfg"
+	"github.com/benderpan/quickshare/server/libs/encrypt"
+	"github.com/benderpan/quickshare/server/libs/errutil"
+	"github.com/benderpan/quickshare/server/libs/fileidx"
+	"github.com/benderpan/quickshare/server/libs/httputil"
+	"github.com/benderpan/quickshare/server/libs/httpworker"
+	"github.com/benderpan/quickshare/server/libs/limiter"
+	"github.com/benderpan/quickshare/server/libs/logutil"
+	"github.com/benderpan/quickshare/server/libs/walls"
 )
 
 const testCap = 3

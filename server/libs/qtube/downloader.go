@@ -5,7 +5,7 @@ import (
 )
 
 import (
-	"github.com/ihexxa/quickshare/server/libs/fileidx"
+	"github.com/benderpan/quickshare/server/libs/fileidx"
 )
 
 type Downloader interface {

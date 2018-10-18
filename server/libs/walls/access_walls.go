@@ -8,9 +8,9 @@ import (
 )
 
 import (
-	"github.com/ihexxa/quickshare/server/libs/cfg"
-	"github.com/ihexxa/quickshare/server/libs/encrypt"
-	"github.com/ihexxa/quickshare/server/libs/limiter"
+	"github.com/benderpan/quickshare/server/libs/cfg"
+	"github.com/benderpan/quickshare/server/libs/encrypt"
+	"github.com/benderpan/quickshare/server/libs/limiter"
 )
 
 type AccessWalls struct {

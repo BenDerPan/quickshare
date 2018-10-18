@@ -8,8 +8,8 @@ import (
 )
 
 import (
-	"github.com/ihexxa/quickshare/server/apis"
-	"github.com/ihexxa/quickshare/server/libs/cfg"
+	"github.com/benderpan/quickshare/server/apis"
+	"github.com/benderpan/quickshare/server/libs/cfg"
 	"github.com/skratchdot/open-golang/open"
 )
 

@@ -7,9 +7,9 @@ import (
 )
 
 import (
-	"github.com/ihexxa/quickshare/server/libs/cfg"
-	"github.com/ihexxa/quickshare/server/libs/encrypt"
-	"github.com/ihexxa/quickshare/server/libs/limiter"
+	"github.com/benderpan/quickshare/server/libs/cfg"
+	"github.com/benderpan/quickshare/server/libs/encrypt"
+	"github.com/benderpan/quickshare/server/libs/limiter"
 )
 
 func newAccessWalls(limiterCap int64, limiterTtl int32, limiterCyc int32, bucketCap int16) *AccessWalls {

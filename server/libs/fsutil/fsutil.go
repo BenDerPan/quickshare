@@ -7,9 +7,9 @@ import (
 )
 
 import (
-	"github.com/ihexxa/quickshare/server/libs/errutil"
-	"github.com/ihexxa/quickshare/server/libs/fileidx"
-	"github.com/ihexxa/quickshare/server/libs/qtube"
+	"github.com/benderpan/quickshare/server/libs/errutil"
+	"github.com/benderpan/quickshare/server/libs/fileidx"
+	"github.com/benderpan/quickshare/server/libs/qtube"
 )
 
 type FsUtil interface {
